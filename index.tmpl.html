@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quel POKéMON es-tu ? ({{ .Version }})</title>
+</head>
+
+<body>
+    <div style="margin-left: auto; margin-right: auto; width: 30%;">
+        <h1 style="display: block; margin-left: auto; margin-right: auto; width: fit-content; color: darkslategrey;">
+            Quel Pokémon es-tu ? ({{ .Version }})</h1>
+        <img width="100%"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{.PokemonID}}.png">
+        <h2 style="display: block; margin-left: auto; margin-right: auto; width: fit-content; color: rgb(30, 64, 64);">
+            {{ .PokemonName }}</h1>
+            <div>
+                <form action="/" method="GET">
+                    <label style="margin-bottom: 2em;" for="name">Votre prénom</label>
+                    <input style="margin-bottom: 2em; width: 100%;" type="text" name="name" id="name" value="{{.Name}}">
+                    <button type="submit"
+                        style="display: block; margin-left: auto; margin-right: auto; width: 33%; padding: 1em; color: rgb(30, 37, 37); background-color: bisque;">
+                        Découvrez votre pokémon</button>
+                </form>
+            </div>
+    </div>
+</body>
+
+</html>
