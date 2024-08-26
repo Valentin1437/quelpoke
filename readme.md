@@ -12,7 +12,7 @@
 #### Sur quel protocole / port écoute-elle ? : 
 *8080*
 
-#### Qu’a-t-elle l’air de proposer comme service ? : 
+#### Que propose-t'elle comme service ? : 
 *Elle détermine le pokemon que nous sommes en fonction de la saisie de notre prénom dans la front, fait un modulo de du hash du prénom, le résultat correspond à l’ID du pokemon dans le pokedex 1G (151 pokemon)*
 
 #### De quels services dépend-elle ? : 
