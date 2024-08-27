@@ -29,6 +29,6 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: docker build -t monapp:v1 .
-      run: docker push europe-west9-docker.pkg.dev/infal-devops-sysops/student-valentingi/monapp .
-      run: echo "Maj Ok"
+    - run: docker build -t monapp:v1 .
+    - run: docker push europe-west9-docker.pkg.dev/infal-devops-sysops/student-valentingi/monapp .
+    - run: echo "Maj Ok"
