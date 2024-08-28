@@ -13,15 +13,14 @@ jobs:
   toto:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: push
-    with:
-      secret: ${{secret.secret}}
-      - run: cat key.json | docker login -u _json_key_base64 --password-stdin https://europe-west9-docker.pkg.dev
-      - run: docker build -t monapp
-      - run: docker tag monapp europe-west9-docker.pkg.dev/infal-devops-sysops/student-valentingi/monapp
-      - run: docker push europe-west9-docker.pkg.dev/infal-devops-sysops/student-valentingi/monapp
+    - run: |
+        docker login -u --password https://europe-west9-docker.pkg.dev
+        with: 
+          super_secret: ${{ secrets.SuperSecret }}
+    - run: docker build -t monapp
+    - run: docker tag monapp europe-west9-docker.pkg.dev/infal-devops-sysops/student-valentingi/monapp
+    - run: docker push europe-west9-docker.pkg.dev/infal-devops-sysops/student-valentingi/monapp
     
